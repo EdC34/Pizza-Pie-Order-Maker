@@ -31,9 +31,8 @@ namespace Choose_Your_Class
                 {
 
                     case "1":
-                        Console.WriteLine("What size pizza would you like? Large, larger or largest?");
-                        string pizzaSize = Console.ReadLine();
-                        Console.WriteLine($"Ok, one {pizzaSize} pizza coming up!");
+                        Console.WriteLine("What size pizza would you like? Please enter the number 1. Large, 2. Larger or 3. Largest?");
+                        pizza.PizzaSize();
                 break;
 
                     case "2":
