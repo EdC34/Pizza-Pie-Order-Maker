@@ -18,6 +18,10 @@ namespace Choose_Your_Class
 
         public string Size { get; set; }
 
+        // public int topping count
+
+        // public int number of added pops
+
         public void SetPizzaSize(string pizzaSize)
         {
             switch (pizzaSize)
@@ -29,10 +33,12 @@ namespace Choose_Your_Class
                 case "2":
                     Console.WriteLine("You chose a larger pizza.");
                     Size = "Larger";
+                    Price += 2;
                     break;
                 case "3":
                     Console.WriteLine("You chose a largest pizza! Mamma mia!");
                     Size = "Largest";
+                    Price += 4;
                     break;
                 default:
                     Console.WriteLine("Mamma mia! Not an option!");
