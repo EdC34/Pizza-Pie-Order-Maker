@@ -16,18 +16,23 @@ namespace Choose_Your_Class
 
         public bool YesDelivery { get; set; }
 
-        public void PizzaSize(string pizzaSize)
+        public string Size { get; set; }
+
+        public void SetPizzaSize(string pizzaSize)
         {
             switch (pizzaSize)
             {
                 case "1":
                     Console.WriteLine("You chose a large pizza.");
+                    Size = "Large";
                     break;
                 case "2":
                     Console.WriteLine("You chose a larger pizza.");
+                    Size = "Larger";
                     break;
                 case "3":
                     Console.WriteLine("You chose a largest pizza! Mamma mia!");
+                    Size = "Largest";
                     break;
                 default:
                     Console.WriteLine("Mamma mia! Not an option!");

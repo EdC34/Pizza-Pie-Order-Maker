@@ -34,7 +34,7 @@ namespace Choose_Your_Class
 
                         Console.WriteLine("What size pizza would you like? Please enter the number 1. Large, 2. Larger or 3. Largest?");
                         string size = Console.ReadLine();
-                        pizza.PizzaSize(size);
+                        pizza.SetPizzaSize(size);
                         break;
 
                     case "2":
