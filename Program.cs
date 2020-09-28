@@ -25,23 +25,25 @@ namespace Choose_Your_Class
                 Console.WriteLine("7. Confirm your order here!");
                 Console.WriteLine("8. Exit and order burgers.");
 
-                var pizzaChoice = Console.ReadLine();
+                var menuChoice = Console.ReadLine();
 
-                switch (pizzaChoice)
+                switch (menuChoice)
                 {
 
                     case "1":
+
                         Console.WriteLine("What size pizza would you like? Please enter the number 1. Large, 2. Larger or 3. Largest?");
-                        pizza.PizzaSize();
-                break;
+                        string size = Console.ReadLine();
+                        pizza.PizzaSize(size);
+                        break;
 
                     case "2":
                         pizza.Toppings();
-                Console.WriteLine("I'll add pepperoni, extra cheese and pineapple to your pizza. That'll add $4 to your order.");
-                break;
+                        Console.WriteLine("I'll add pepperoni, extra cheese and pineapple to your pizza. That'll add $4 to your order.");
+                        break;
 
                     case "3":
-                        pizza.IsDelivery();
+                        pizza.SetDelivery();
                         break;
 
                     case "4":
@@ -50,29 +52,29 @@ namespace Choose_Your_Class
 
                     case "5":
                         pizza.AddPop();
-                Console.WriteLine("An ice cold soda is tasty with a hot pizza pie! That'll be an extra $2.");
-                break;
+                        Console.WriteLine("An ice cold soda is tasty with a hot pizza pie! That'll be an extra $2.");
+                        break;
 
                     case "6":
                         int currentPrice = pizza.OrderDetails();
-                Console.WriteLine($"Your order will cost {currentPrice:C2}");
-                break;
+                        Console.WriteLine($"Your order will cost {currentPrice:C2}");
+                        break;
 
                     case "7":
                         int finalPrice = pizza.OrderDetails();
-                        string finalPizzaSize = pizza.PizzaSize();
-                Console.WriteLine($"That will be {finalPrice:C2}, see you soon!");
-                makingOrder = false;
-                break;
+                        // string finalPizzaSize = pizza.PizzaSize();
+                        Console.WriteLine($"That will be {finalPrice:C2}, see you soon!");
+                        makingOrder = false;
+                        break;
 
                     case "8":
                         Console.WriteLine("I didn't feel like doing work anyway. Bye.");
-                makingOrder = false;
-                break;
+                        makingOrder = false;
+                        break;
 
-                default:
+                    default:
                         Console.WriteLine("That doesn't compute, my friend! Pick another option!");
-                break; 
+                        break; 
                 }
             }
         }

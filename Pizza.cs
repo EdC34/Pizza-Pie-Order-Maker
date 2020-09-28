@@ -9,10 +9,14 @@ namespace Choose_Your_Class
         public Pizza()
         {
             Price = 20;
+            YesDelivery = false;
         }
+
         public int Price { get; set; }
 
-        public int PizzaSize()
+        public bool YesDelivery { get; set; }
+
+        public void PizzaSize(string pizzaSize)
         {
             switch (pizzaSize)
             {
@@ -31,19 +35,28 @@ namespace Choose_Your_Class
             }
             return;
         }
+
         public int OrderDetails()
         {
             return Price;
         }
-        public int IsDelivery()
 
-        { 
-           return 
+        public void SetDelivery()
+        {
+            Console.WriteLine("Would you like this delivered? Please enter y for yes or n for no.");
+            string deliveryChoice = Console.ReadLine();
+            if (deliveryChoice == "y")
+            {
+                YesDelivery = true;
+                Console.WriteLine("Ok, this will be for delivery!");
+            }
         }
+
         public void AddPop()
         {
             Price += 2;
         }
+
         public void Toppings()
         {
             Price += 4;
