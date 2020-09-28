@@ -50,8 +50,17 @@ namespace Choose_Your_Class
         public int OrderDetails()
         {
             return Price;
+
+        }
+        public int OrderToppings()
+        {
+            return Topping;
         }
 
+        public int TotalPops()
+        {
+            return PopsAdded;
+        }
         public void SetDelivery()
         {
             Console.WriteLine("Would you like this delivered? Please enter y for yes or n for no.");

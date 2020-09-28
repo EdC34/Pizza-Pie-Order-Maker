@@ -57,8 +57,9 @@ namespace Choose_Your_Class
 
                     case "6":
                         int finalPrice = pizza.OrderDetails();
-                        // string finalPizzaSize = pizza.PizzaSize();
-                        Console.WriteLine($"That will be {finalPrice:C2}, see you soon!");
+                        int totalToppings = pizza.OrderToppings();
+                        int finalPops = pizza.TotalPops();
+                        Console.WriteLine($"That will be {finalPrice:C2}, your pizza will have {totalToppings} topping(s) on it and you'll also get {finalPops} ice cold soda(s) to wash it down. see you soon!");
                         makingOrder = false;
                         break;
 
