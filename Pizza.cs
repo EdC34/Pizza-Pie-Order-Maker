@@ -18,9 +18,9 @@ namespace Choose_Your_Class
 
         public string Size { get; set; }
 
-        // public int topping count
+        public int Topping { get; set; }
 
-        // public int number of added pops
+        public int PopsAdded { get; set; }
 
         public void SetPizzaSize(string pizzaSize)
         {
@@ -66,11 +66,13 @@ namespace Choose_Your_Class
         public void AddPop()
         {
             Price += 2;
+            PopsAdded += 1;
         }
 
         public void Toppings()
         {
             Price += 4;
+            Topping += 1;
         }
     }
 }
