@@ -52,7 +52,9 @@ namespace Choose_Your_Class
 
                     case "5":
                         int currentPrice = pizza.OrderDetails();
-                        Console.WriteLine($"Your order will cost {currentPrice:C2}");
+                        int currentToppings = pizza.OrderToppings();
+                        int currentPops = pizza.TotalPops();
+                        Console.WriteLine($"Your order will cost {currentPrice:C2}. Your pizza has {currentToppings} topping(s) right now and you have {currentPops} soda(s) in your order at this time.");
                         break;
 
                     case "6":
